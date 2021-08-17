@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "armory-component-ui": "^0.8.4",
+    "armory-component-ui-addbuff": "0.0.9",
     "axios": "^0.17.1",
     "classnames": "^2.2.5",
     "function-batch": "^1.1.2",

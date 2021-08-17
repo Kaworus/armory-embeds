@@ -9,6 +9,7 @@ import T from 'i18n-react';
 import { Tooltip, persistToLocalStorage, forceCacheClearOnNextRun } from 'armory-component-ui';
 // $FlowFixMe
 import '!!style-loader!css-loader!armory-component-ui/styles.css'; // eslint-disable-line
+import '!!style-loader!css-loader!armory-component-ui-addbuff/styles.css'; // eslint-disable-line
 
 import { addStyleSheet } from './lib/dom';
 import styles from './styles.less';
@@ -72,7 +73,6 @@ function bootstrapEmbeds ({ lang }) {
     // Remove the attribute so if the embed script is added to the document again, it doesn't pick
     // already bootstrapped embeds.
     element.removeAttribute(makeAttribute('embed'));
-
     return import(`./creators/${embedName}`).then(({ default: createEmbed }) => {
       const rawIds = element.getAttribute(makeAttribute('ids'));
       const blankText = element.getAttribute(makeAttribute('blank-text')) || T.translate('words.optional');
